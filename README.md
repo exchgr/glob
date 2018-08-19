@@ -1,4 +1,6 @@
 # glob
+[![Maintainability](https://api.codeclimate.com/v1/badges/e86d2107e055dbe9e9fe/maintainability)](https://codeclimate.com/github/exchgr/glob/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/e86d2107e055dbe9e9fe/test_coverage)](https://codeclimate.com/github/exchgr/glob/test_coverage)
 
 Social blogging platform to replace Twitter
 
