@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.limit(5)
+    @posts = Post.limit(5).order(created_at: :desc)
     @preview_renderer = PostRenderer.new(Redcarpet::Render::StripDown)
   end
 
