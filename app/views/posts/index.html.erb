@@ -1,0 +1,16 @@
+<div id="posts">
+  <h1>Posts</h1>
+  <% @posts.each do |post| %>
+    <div class="post">
+      <%= link_to post do %>
+        <h2 class="post-title">
+          <%= post.title %>
+        </h2>
+
+        <p class="post-preview">
+          <%= post.preview %>...
+        </p>
+      <% end %>
+    </div>
+  <% end %>
+</div>
