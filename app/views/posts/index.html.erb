@@ -8,7 +8,7 @@
         </h2>
 
         <p class="post-preview">
-          <%= post.preview %>...
+          <%= @preview_renderer.render_body(post)[0..1000] %>...
         </p>
       <% end %>
     </div>

@@ -28,8 +28,14 @@ make start
 and connect to http://localhost:3000
 
 ## Testing
+To run all tests, run:
 ```
 make rspec ARGS="..."
+```
+
+To run only the unit tests, run:
+```
+make rspec_unit ARGS="..."
 ```
 
 ## Running arbitrary rake/rails commands

@@ -10,6 +10,9 @@ setup: build
 rspec:
 	docker-compose run web bundle exec rspec ${ARGS}
 
+rspec_unit:
+	docker-compose run rspec_unit ${ARGS}
+
 rails:
 	docker-compose run web bundle exec rails ${ARGS}
 

@@ -1,10 +1,14 @@
+require_relative '../objects/post_renderer'
+
 class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
+    @body_renderer = PostRenderer.new(Redcarpet::Render::HTML)
   end
 
   def index
     @posts = Post.limit(5)
+    @preview_renderer = PostRenderer.new(Redcarpet::Render::StripDown)
   end
 
   def new

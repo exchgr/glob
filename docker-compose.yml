@@ -14,3 +14,9 @@ services:
       - "3000:3000"
     depends_on:
       - db
+
+  rspec_unit:
+    build: .
+    command: bundle exec rspec
+    volumes:
+      - .:/glob
