@@ -1,13 +1,15 @@
 require_relative '../objects/post_renderer'
 
 class PostsController < ApplicationController
+  before_action :authenticate_user!
+
   def show
     @post = Post.find(params[:id])
     @body_renderer = PostRenderer.new(Redcarpet::Render::HTML)
   end
 
   def index
-    @posts = Post.limit(5).order(created_at: :desc)
+    @posts = current_user.posts.limit(5).order(created_at: :desc)
     @preview_renderer = PostRenderer.new(Redcarpet::Render::StripDown)
   end
 
