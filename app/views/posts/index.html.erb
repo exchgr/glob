@@ -7,6 +7,10 @@
           <%= post.title %>
         </h2>
 
+        <%= render partial: "metadata", locals: {
+          post: post
+        } %>
+
         <p class="post-preview">
           <%= @preview_renderer.render_body(post)[0..1000] %>...
         </p>

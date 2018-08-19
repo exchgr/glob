@@ -5,5 +5,9 @@
     <%= @post.title %>
   </h1>
 
+  <%= render partial: "metadata", locals: {
+    post: @post
+  } %>
+
   <%= @body_renderer.render_body(@post) %>
 </article>
