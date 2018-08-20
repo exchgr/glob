@@ -1,12 +1,12 @@
 <%= form_for post, html: {
   class: "post-form"
   } do |f| %>
-  <div class="title">
+  <div class="form-field">
     <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
 
-  <div class="body">
+  <div class="form-field">
     <%= f.label :body %>
     <%= f.text_area :body %>
   </div>
